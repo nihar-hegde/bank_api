@@ -117,9 +117,15 @@ Return the bank branch details by the bankid and the ifsc code.
 
 ### URL: https://bank-api-uohz.onrender.com
 
-#### URLS for hosted version:
+## Bank API
 
--> https://bank-api-uohz.onrender.com/api/v1/banks
--> https://bank-api-uohz.onrender.com/api/v1/bank-branches?bankName=PUNJAB NATIONAL BANK
--> https://bank-api-uohz.onrender.com/api/v1/branch-details/SMBC0000001
--> https://bank-api-uohz.onrender.com/api/v1/branch-detailsbybankId/SMBC0000001?bankId=170
+This API provides information about banks and their branches.
+
+### Endpoints
+
+| Endpoint                                                    | Description                                           |
+| :---------------------------------------------------------- | :---------------------------------------------------- |
+| `GET /api/v1/banks`                                         | Get a list of all banks                               |
+| `GET /api/v1/bank-branches?bankName={bankName}`             | Get all branches for a specific bank                  |
+| `GET /api/v1/branch-details/{ifsc}`                         | Get details for a specific branch by IFSC code        |
+| `GET /api/v1/branch-detailsbybankId/{ifsc}?bankId={bankId}` | Get details for a specific branch by IFSC and bank ID |
